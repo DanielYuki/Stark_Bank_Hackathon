@@ -1,4 +1,5 @@
 import React from "react"
+import Clients from "../components/Clients"
 
 export default function Validation(){
     return (
@@ -6,6 +7,7 @@ export default function Validation(){
             <h1>
                 Validation
             </h1>
+            <Clients />
         </>
     )
 }
