@@ -4,7 +4,7 @@ body {
 }
 
 .box {
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     padding-top: 20px;
     
 
@@ -16,13 +16,13 @@ body {
 }
 
 .technical {
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     width: 600px;
     height: 500px;
 }
 
 .contact {
-background-color: rgb(255, 255, 255);
+/* background-color: rgb(255, 255, 255); */
 width: 600px;
 
 }

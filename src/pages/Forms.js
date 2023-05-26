@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import './Forms.css'
+import "./Forms.css";
+import { v4 as uuidv4 } from "uuid";
 
-export default function Forms() {
+export default function Forms({ clients, setClients }) {
   const [formData, setFormData] = useState({
     name: "",
     employees: "",
@@ -13,6 +14,7 @@ export default function Forms() {
     term: "",
     goal: "",
     nota: 0,
+    id: "",
   });
 
   const handleChange = (event) => {
@@ -47,30 +49,37 @@ export default function Forms() {
       term,
       goal,
       nota,
+      id: uuidv4(),
     });
 
-    console.log(jsonData);
+    fetch("http://localhost:8000/addClients", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: jsonData,
+    })
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        console.log(data);
+      });
+
+    // console.log(jsonData);
+    console.log(clients);
+
+    // setClients([...clients, formData]);
   };
-
-
-
 
   return (
     <>
       <h1>Loan proposal</h1>
 
-
-
-
       <form className="box" id="formularioEmprestimo" onSubmit={handleSubmit}>
-
         <div className="boxTechnicalAndContact">
-
           <div className="technical">
-
             <h2>technical information</h2>
-
-
             <label htmlFor="EMPLOYEES">Number of employees:</label>
             <br />
             <input
@@ -86,7 +95,6 @@ export default function Forms() {
               required
             />
             <br /> <br />
-
             <label htmlFor="AGE">Age of the company:</label>
             <br />
             <select
@@ -104,8 +112,8 @@ export default function Forms() {
               <option value="0.75">Between 8 and 16 years</option>
               <option value="1.00">Over 16 years old</option>
             </select>
-            <br /><br />
-
+            <br />
+            <br />
             <label htmlFor="SEGMENT">The company segment:</label>
             <br />
             <select
@@ -137,8 +145,8 @@ export default function Forms() {
               <option value="0.40">Government relations</option>
               <option value="0.68">Corporate social responsibility</option>
             </select>
-            <br /><br />
-
+            <br />
+            <br />
             <label htmlFor="AMOUNT">Required amount:</label>
             <br />
             <select
@@ -158,8 +166,8 @@ export default function Forms() {
               <option value="0.50">Between $20.000.000 and $100.000.000</option>
               <option value="0.20">Over than $100.000.000</option>
             </select>
-            <br /><br />
-
+            <br />
+            <br />
             <label htmlFor="TERM">Start of payment:</label>
             <br />
             <select
@@ -175,15 +183,12 @@ export default function Forms() {
               <option value="0.50">in a semester</option>
               <option value="0.30">in a year</option>
             </select>
-            <br /><br />
-
+            <br />
+            <br />
           </div>
 
-
           <div className="contact">
-
             <h2>Contact information</h2>
-
 
             <label htmlFor="NAME">Company name:</label>
             <br />
@@ -196,7 +201,8 @@ export default function Forms() {
               onChange={handleChange}
               placeholder="-----"
             />
-            <br /><br />
+            <br />
+            <br />
 
             <label htmlFor="EMAIL">Email:</label>
             <br />
@@ -212,7 +218,8 @@ export default function Forms() {
               title="Please enter a valid email."
               required
             />
-            <br /><br />
+            <br />
+            <br />
 
             <label htmlFor="NUMBER">Phone Number:</label>
             <br />
@@ -228,14 +235,12 @@ export default function Forms() {
               title="Please enter a valid number."
               required
             />
-            <br /><br />
-
+            <br />
+            <br />
           </div>
-
         </div>
 
         <div>
-
           <label htmlFor="GOAL">Goals:</label>
           <br />
           <textarea
@@ -250,11 +255,9 @@ export default function Forms() {
           ></textarea>
           <br />
           <br />
-
         </div>
 
         <input className="selectBox" type="submit" value="Submit" />
-
       </form>
     </>
   );

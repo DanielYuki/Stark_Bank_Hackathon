@@ -10,7 +10,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-// Define your data
+// dummy data
 const clients = [
   {
     id: "1",
@@ -67,6 +67,16 @@ app.get("/clients/:id", (req, res) => {
   } else {
     res.status(404).json({ error: "Client not found" });
   }
+});
+
+app.post('/addClients', (req, res) => {
+  const newItem = req.body; // The new item sent from the client
+  
+  // Process the new item and add it to your list
+  // Here, you can store it in a database, an in-memory array, or any other data storage mechanism
+  clients.push(newItem);
+  // Send a response back to the client
+  res.status(201).json(newItem);
 });
 
 app.delete("/clients/:id", (req, res) => {
