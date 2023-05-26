@@ -10,8 +10,15 @@ export default function Forms({ clients, setClients }) {
     number: "",
     age: "",
     segment: "",
-    amount: "",
+    ammount: "",
     term: "",
+    CNPJCPF: "",
+    streetline1: "",
+    streetline2: "",
+    district: "",
+    city: "",
+    CEP: "",
+    UF: "",
     goal: "",
     nota: 0,
     id: "",
@@ -28,13 +35,13 @@ export default function Forms({ clients, setClients }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const { name, employees, email, number, age, segment, amount, term, goal } =
+    const { name, employees, email, number, age, segment, ammount, term, CNPJCPF, streetline1, streetline2, district, city, CEP, UF, goal } =
       formData;
 
     const nota =
       (parseFloat(age) +
         parseFloat(segment) +
-        parseFloat(amount) +
+        parseFloat(ammount) +
         parseFloat(term)) *
       1.25;
 
@@ -45,8 +52,15 @@ export default function Forms({ clients, setClients }) {
       number,
       age,
       segment,
-      amount,
+      ammount,
       term,
+      CNPJCPF,
+      streetline1,
+      streetline2,
+      district,
+      city,
+      CEP,
+      UF,
       goal,
       nota,
       id: uuidv4(),
@@ -103,6 +117,7 @@ export default function Forms({ clients, setClients }) {
               id="AGE"
               value={formData.age}
               onChange={handleChange}
+              required
             >
               <option value="">-----</option>
               <option value="0.15">less than a year</option>
@@ -122,6 +137,7 @@ export default function Forms({ clients, setClients }) {
               id="SEGMENT"
               value={formData.segment}
               onChange={handleChange}
+              required
             >
               <option value="">-----</option>
               <option value="0.90">Strategic management</option>
@@ -145,16 +161,17 @@ export default function Forms({ clients, setClients }) {
               <option value="0.40">Government relations</option>
               <option value="0.68">Corporate social responsibility</option>
             </select>
-            <br />
-            <br />
-            <label htmlFor="AMOUNT">Required amount:</label>
+            <br /><br />
+
+            <label htmlFor="AMMOUNT">Required amount:</label>
             <br />
             <select
               className="selectBox"
-              name="amount"
-              id="AMOUNT"
-              value={formData.amount}
+              name="ammount"
+              id="AMMOUNT"
+              value={formData.ammount}
               onChange={handleChange}
+              required
             >
               <option value="">-----</option>
               <option value="0.10">Less than $10.000</option>
@@ -176,6 +193,7 @@ export default function Forms({ clients, setClients }) {
               id="TERM"
               value={formData.term}
               onChange={handleChange}
+              required
             >
               <option value="">-----</option>
               <option value="1.00">immediate</option>
@@ -183,8 +201,8 @@ export default function Forms({ clients, setClients }) {
               <option value="0.50">in a semester</option>
               <option value="0.30">in a year</option>
             </select>
-            <br />
-            <br />
+            <br /><br />
+
           </div>
 
           <div className="contact">
@@ -200,6 +218,7 @@ export default function Forms({ clients, setClients }) {
               value={formData.name}
               onChange={handleChange}
               placeholder="-----"
+              required
             />
             <br />
             <br />
@@ -235,12 +254,14 @@ export default function Forms({ clients, setClients }) {
               title="Please enter a valid number."
               required
             />
-            <br />
-            <br />
+            <br /><br />
+
           </div>
+
         </div>
 
         <div>
+
           <label htmlFor="GOAL">Goals:</label>
           <br />
           <textarea
@@ -255,7 +276,15 @@ export default function Forms({ clients, setClients }) {
           ></textarea>
           <br />
           <br />
+
         </div>
+
+        </div>
+
+
+
+
+
 
         <input className="selectBox" type="submit" value="Submit" />
       </form>
