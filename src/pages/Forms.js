@@ -225,6 +225,135 @@ export default function Forms({ clients, setClients }) {
             </select>
             <br /><br />
 
+            <label htmlFor="CNPJCPF">CNPJ/CPF:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="CNPJCPF"
+              name="CNPJCPF"
+              value={formData.CNPJCPF}
+              onChange={handleChange}
+              placeholder="-----"
+              pattern="^\d+$"
+              title="Please enter a valid CNPJ/CPF."
+              required
+            />
+            <br /> <br />
+
+            <label htmlFor="streetline1">streetline1:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="streetline1"
+              name="streetline1"
+              value={formData.streetline1}
+              onChange={handleChange}
+              placeholder="-----"
+              required
+            />
+            <br /><br />
+
+            <label htmlFor="streetline2">streetline2:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="streetline2"
+              name="streetline2"
+              value={formData.streetline2}
+              onChange={handleChange}
+              placeholder="-----"
+              required
+            />
+            <br /><br />
+
+            <label htmlFor="district">District:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="district"
+              name="district"
+              value={formData.district}
+              onChange={handleChange}
+              placeholder="-----"
+              required
+            />
+            <br /><br />
+
+            <label htmlFor="city">city:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="city"
+              name="city"
+              value={formData.city}
+              onChange={handleChange}
+              placeholder="-----"
+              required
+            />
+            <br /><br />
+
+            <label htmlFor="CEP">CEP:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="CEP"
+              name="CEP"
+              value={formData.CEP}
+              onChange={handleChange}
+              placeholder="-----"
+              pattern="^\d+$"
+              title="Please enter a valid number."
+              required
+            /> <br /><br />
+
+            <label htmlFor="UF">UF:</label>
+            <br />
+            <select
+              className="selectBox"
+              name="UF"
+              id="UF"
+              value={formData.UF}
+              onChange={handleChange}
+              required
+            >
+              <option value="">-----</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+
+            </select>
+            <br /><br />
+
           </div>
 
           <div className="contact">
@@ -278,26 +407,28 @@ export default function Forms({ clients, setClients }) {
             />
             <br /><br />
 
+            <label htmlFor="GOAL"><h2>Goals</h2></label>
+            <br />
+            <textarea
+              className="goalBox"
+              id="GOAL"
+              name="goal"
+              rows="29"
+              cols="27"
+              value={formData.goal}
+              onChange={handleChange}
+              placeholder="Make a discription of yours goals and methods"
+              required
+            ></textarea>
+            <br />
+            <br />
+
           </div>
 
         </div>
 
         <div>
 
-          <label htmlFor="GOAL">Goals:</label>
-          <br />
-          <textarea
-            className="goalBox"
-            id="GOAL"
-            name="goal"
-            rows="7"
-            cols="80"
-            value={formData.goal}
-            onChange={handleChange}
-            placeholder="Make a discription of yours goals and methods"
-          ></textarea>
-          <br />
-          <br />
 
         </div>
 
