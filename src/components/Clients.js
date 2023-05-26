@@ -1,17 +1,7 @@
 import React from "react";
-// import { Link } from "react-router-dom"
+import { generateContract } from "../functions";
 
 export default function Clients({ clients, setClients }) {
-  // const [clients, setClients] = React.useState([]);
-
-  // React.useEffect(() => {
-  //   fetch("http://localhost:8000/clients")
-  //     .then((res) => res.json())
-  //     .then((data) => setClients(data))
-  //     .catch((error) => {
-  //       console.error("Error fetching clients:", error);
-  //     });
-  // }, []);
 
   function deleteClient(id) {
     fetch(`http://localhost:8000/clients/${id}`, { method: "DELETE" })
@@ -27,8 +17,9 @@ export default function Clients({ clients, setClients }) {
       });
   }
 
-  function aproveClient(id) {
+  function aproveClient(client) {
     // sandbox starkbank
+    generateContract(client);
     console.log("aproveClient");
   }
 
@@ -62,7 +53,7 @@ export default function Clients({ clients, setClients }) {
         </p>
         <button
           className="aprove-button"
-          onClick={() => aproveClient(client.id)}
+          onClick={() => aproveClient(client)}
         >
           Approve
         </button>

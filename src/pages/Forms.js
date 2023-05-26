@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Forms.css";
 import { v4 as uuidv4 } from "uuid";
 // import { sendEmail } from "../functions";
+// import { generateContract } from "../functions";
 
 export default function Forms({ clients, setClients }) {
   const [formData, setFormData] = useState({
@@ -67,6 +68,9 @@ export default function Forms({ clients, setClients }) {
       id: uuidv4(),
     });
 
+    // GENERATE PDF CONTRACT FUNCTION
+    // generateContract(formData);
+
     try {
       fetch("http://localhost:8000/addClients", {
         method: "POST",
@@ -91,21 +95,6 @@ export default function Forms({ clients, setClients }) {
       // Handle the error here
       console.error("An error occurred:", error);
     }
-
-    // fetch("http://localhost:8000/addClients", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: jsonData,
-    // })
-    //   .then((response) => {
-    //     return response.text();
-    //   })
-    //   .then((data) => {
-    //     console.log(data);
-    //   });
-    // console.log(clients);
 
   };
 

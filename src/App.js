@@ -7,8 +7,6 @@ import Forms from "./pages/Forms";
 import Validation from "./pages/Validation";
 import Layout from "./components/Layout";
 
-// import "./server"
-
 function App() {
   const [clients, setClients] = React.useState([]);
 
