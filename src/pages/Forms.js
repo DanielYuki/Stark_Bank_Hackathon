@@ -9,8 +9,15 @@ export default function Forms() {
     number: "",
     age: "",
     segment: "",
-    amount: "",
+    ammount: "",
     term: "",
+    CNPJCPF: "",
+    streetline1: "",
+    streetline2: "",
+    district: "",
+    city: "",
+    CEP: "",
+    UF: "",
     goal: "",
     nota: 0,
   });
@@ -26,13 +33,13 @@ export default function Forms() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const { name, employees, email, number, age, segment, amount, term, goal } =
+    const { name, employees, email, number, age, segment, ammount, term, CNPJCPF, streetline1, streetline2, district, city, CEP, UF, goal } =
       formData;
 
     const nota =
       (parseFloat(age) +
         parseFloat(segment) +
-        parseFloat(amount) +
+        parseFloat(ammount) +
         parseFloat(term)) *
       1.25;
 
@@ -43,8 +50,15 @@ export default function Forms() {
       number,
       age,
       segment,
-      amount,
+      ammount,
       term,
+      CNPJCPF,
+      streetline1,
+      streetline2,
+      district,
+      city,
+      CEP,
+      UF,
       goal,
       nota,
     });
@@ -95,6 +109,7 @@ export default function Forms() {
               id="AGE"
               value={formData.age}
               onChange={handleChange}
+              required
             >
               <option value="">-----</option>
               <option value="0.15">less than a year</option>
@@ -114,6 +129,7 @@ export default function Forms() {
               id="SEGMENT"
               value={formData.segment}
               onChange={handleChange}
+              required
             >
               <option value="">-----</option>
               <option value="0.90">Strategic management</option>
@@ -139,14 +155,15 @@ export default function Forms() {
             </select>
             <br /><br />
 
-            <label htmlFor="AMOUNT">Required amount:</label>
+            <label htmlFor="AMMOUNT">Required amount:</label>
             <br />
             <select
               className="selectBox"
-              name="amount"
-              id="AMOUNT"
-              value={formData.amount}
+              name="ammount"
+              id="AMMOUNT"
+              value={formData.ammount}
               onChange={handleChange}
+              required
             >
               <option value="">-----</option>
               <option value="0.10">Less than $10.000</option>
@@ -168,12 +185,142 @@ export default function Forms() {
               id="TERM"
               value={formData.term}
               onChange={handleChange}
+              required
             >
               <option value="">-----</option>
               <option value="1.00">immediate</option>
               <option value="0.90">in a bimester</option>
               <option value="0.50">in a semester</option>
               <option value="0.30">in a year</option>
+            </select>
+            <br /><br />
+
+            <label htmlFor="CNPJCPF">CNPJ/CPF:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="CNPJCPF"
+              name="CNPJCPF"
+              value={formData.CNPJCPF}
+              onChange={handleChange}
+              placeholder="-----"
+              pattern="^\d+$"
+              title="Please enter a valid CNPJ/CPF."
+              required
+            />
+            <br /> <br />
+
+            <label htmlFor="streetline1">streetline1:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="streetline1"
+              name="streetline1"
+              value={formData.streetline1}
+              onChange={handleChange}
+              placeholder="-----"
+              required
+            />
+            <br /><br />
+
+            <label htmlFor="streetline2">streetline2:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="streetline2"
+              name="streetline2"
+              value={formData.streetline2}
+              onChange={handleChange}
+              placeholder="-----"
+              required
+            />
+            <br /><br />
+
+            <label htmlFor="district">District:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="district"
+              name="district"
+              value={formData.district}
+              onChange={handleChange}
+              placeholder="-----"
+              required
+            />
+            <br /><br />
+
+            <label htmlFor="city">city:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="city"
+              name="city"
+              value={formData.city}
+              onChange={handleChange}
+              placeholder="-----"
+              required
+            />
+            <br /><br />
+
+            <label htmlFor="CEP">CEP:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="CEP"
+              name="CEP"
+              value={formData.CEP}
+              onChange={handleChange}
+              placeholder="-----"
+              pattern="^\d+$"
+              title="Please enter a valid number."
+              required
+            /> <br /><br />
+
+            <label htmlFor="UF">UF:</label>
+            <br />
+            <select
+              className="selectBox"
+              name="UF"
+              id="UF"
+              value={formData.UF}
+              onChange={handleChange}
+              required
+            >
+              <option value="">-----</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+
             </select>
             <br /><br />
 
@@ -195,6 +342,7 @@ export default function Forms() {
               value={formData.name}
               onChange={handleChange}
               placeholder="-----"
+              required
             />
             <br /><br />
 
@@ -229,29 +377,30 @@ export default function Forms() {
               required
             />
             <br /><br />
+            <label htmlFor="GOAL"><h2>Goals</h2></label>
+            <br />
+            <textarea
+              className="goalBox"
+              id="GOAL"
+              name="goal"
+              rows="29"
+              cols="27"
+              value={formData.goal}
+              onChange={handleChange}
+              placeholder="Make a discription of yours goals and methods"
+              required
+            ></textarea>
+            <br />
+            <br />
 
           </div>
 
         </div>
 
-        <div>
 
-          <label htmlFor="GOAL">Goals:</label>
-          <br />
-          <textarea
-            className="goalBox"
-            id="GOAL"
-            name="goal"
-            rows="7"
-            cols="80"
-            value={formData.goal}
-            onChange={handleChange}
-            placeholder="Make a discription of yours goals and methods"
-          ></textarea>
-          <br />
-          <br />
 
-        </div>
+
+
 
         <input className="selectBox" type="submit" value="Submit" />
 
