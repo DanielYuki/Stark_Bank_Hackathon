@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Forms.css";
 import { v4 as uuidv4 } from "uuid";
+// import { sendEmail } from "../functions";
 
 export default function Forms({ clients, setClients }) {
   const [formData, setFormData] = useState({
@@ -66,24 +67,45 @@ export default function Forms({ clients, setClients }) {
       id: uuidv4(),
     });
 
-    fetch("http://localhost:8000/addClients", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: jsonData,
-    })
-      .then((response) => {
-        return response.text();
+    try {
+      fetch("http://localhost:8000/addClients", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: jsonData,
       })
-      .then((data) => {
-        console.log(data);
-      });
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.text();
+        })
+        .then((data) => {
+          // sendEmail(email, name, goal)
+          // console.log("email sent to " + email)
+          console.log(data);
+        });
+    } catch (error) {
+      // Handle the error here
+      console.error("An error occurred:", error);
+    }
 
-    // console.log(jsonData);
-    console.log(clients);
+    // fetch("http://localhost:8000/addClients", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: jsonData,
+    // })
+    //   .then((response) => {
+    //     return response.text();
+    //   })
+    //   .then((data) => {
+    //     console.log(data);
+    //   });
+    // console.log(clients);
 
-    // setClients([...clients, formData]);
   };
 
   return (
@@ -278,13 +300,6 @@ export default function Forms({ clients, setClients }) {
           <br />
 
         </div>
-
-        </div>
-
-
-
-
-
 
         <input className="selectBox" type="submit" value="Submit" />
       </form>
