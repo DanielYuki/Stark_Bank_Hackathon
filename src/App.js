@@ -7,7 +7,7 @@ import Forms from "./pages/Forms";
 import Validation from "./pages/Validation";
 import Layout from "./components/Layout";
 
-import "./server"
+// import "./server"
 
 function App() {
   return (

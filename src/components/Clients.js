@@ -5,13 +5,13 @@ export default function Clients() {
   const [clients, setClients] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("/api/clients")
+    fetch("http://localhost:8000/clients")
       .then((res) => res.json())
-      .then((data) => setClients(data.clients));
+      .then((data) => setClients(data));
   }, []);
 
   function deleteClient(id) {
-    fetch(`/api/clients/${id}`, { method: "DELETE" });
+    fetch(`http://localhost:8000/clients/${id}`, { method: "DELETE" });
     setClients((clients) => clients.filter((client) => client.id !== id));
   }
 
