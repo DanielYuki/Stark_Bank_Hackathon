@@ -82,6 +82,7 @@ export default function Forms({ clients, setClients }) {
           return response.text();
         })
         .then((data) => {
+          // REMEMBER TO UNCOMMENT THIS TO USE EMAIL
           // sendEmail(email, name, goal)
           // console.log("email sent to " + email)
           console.log(data);

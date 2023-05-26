@@ -3,55 +3,58 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
-app.use(function(req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
+app.use(function (req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Access-Control-Allow-Headers"
+  );
   next();
 });
 
 // dummy data
 const clients = [
   {
-    id: "1",
-    name: "Modest Explorer",
-    email: "",
-    estimatedValue: 30,
-    currentlyValue: 40,
-    loan: 60,
-    description: "The longer!",
-    confiability: 50,
-    warranty: "https.png",
-    type: "simple",
-    clientId: 2,
+    name: "Unblivion",
+    employees: "27",
+    email: "unblivion@gmail.com",
+    number: "40028922",
+    age: "0.25",
+    segment: "0.72",
+    ammount: "0.25",
+    term: "1.00",
+    CNPJCPF: "",
+    streetline1: "",
+    streetline2: "",
+    district: "",
+    city: "",
+    CEP: "",
+    UF: "",
+    goal: "Do something",
+    nota: 2.7749999999999995,
+    id: "1f0a70b7-d319-481e-ba4e-114035d08bc1",
   },
   {
-    id: "2",
-    name: "Beach Bum",
-    email: "",
-    estimatedValue: 30,
-    currentlyValue: 40,
-    loan: 80,
-    description: "Beach Bum is.",
-    confiability: 50,
-    warranty: "https.png",
-    type: "rugged",
-    clientId: 2,
+    name: "linguica",
+    employees: "123",
+    email: "vroffice21@gmail.com",
+    number: "666666",
+    age: "0.75",
+    segment: "0.81",
+    ammount: "0.10",
+    term: "0.50",
+    CNPJCPF: "",
+    streetline1: "",
+    streetline2: "",
+    district: "",
+    city: "",
+    CEP: "",
+    UF: "",
+    goal: "liguicao",
+    nota: 2.7,
+    id: "072bae9f-ac13-4640-bf3d-2afa2e4a81c4",
   },
-  {
-    id: "3",
-    name: "Reliable Red",
-    email: "",
-    estimatedValue: 30,
-    currentlyValue: 40,
-    loan: 100,
-    description: "Reliable .",
-    confiability: 50,
-    warranty: "https:/d.png",
-    type: "luxury",
-    clientId: 2,
-  },
-  // Add more client objects as needed
 ];
 
 // Define routes
@@ -69,9 +72,9 @@ app.get("/clients/:id", (req, res) => {
   }
 });
 
-app.post('/addClients', (req, res) => {
+app.post("/addClients", (req, res) => {
   const newItem = req.body; // The new item sent from the client
-  
+
   // Process the new item and add it to your list
   // Here, you can store it in a database, an in-memory array, or any other data storage mechanism
   clients.push(newItem);
