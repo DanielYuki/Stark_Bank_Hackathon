@@ -8,8 +8,7 @@ export default function Validation({clients, setClients}){
             <h1>
                 Validation
             </h1>
-            {/* REMEMBER TO FIX THIS */}
-            {clients ? <Clients clients={clients} setClients={setClients}/> :
+            {clients != "" ? <Clients clients={clients} setClients={setClients}/> :
              <h2> Nothing to show </h2>}
         </div >
     )

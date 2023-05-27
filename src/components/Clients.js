@@ -3,7 +3,8 @@ import { generateContract } from "../functions";
 
 export default function Clients({ clients, setClients }) {
 
-  function deleteClient(id) {
+  function deleteClient(id, event) {
+    event.stopPropagation();
     fetch(`http://localhost:8000/clients/${id}`, { method: "DELETE" })
       .then((res) => {
         if (res.ok) {
@@ -17,9 +18,12 @@ export default function Clients({ clients, setClients }) {
       });
   }
 
-  function aproveClient(client) {
+  function aproveClient(client, event) {
+    event.preventDefault();
+    event.stopPropagation();
+
     // sandbox starkbank
-    generateContract(client);
+    // generateContract(client);
     console.log("aproveClient");
   }
 
@@ -52,16 +56,10 @@ export default function Clients({ clients, setClients }) {
           <span>Wants</span> ${client.ammount} to {client.goal}
         </p>
         <button
-          className="aprove-button"
-          onClick={() => aproveClient(client)}
-        >
-          Approve
-        </button>
-        <button
           className="delete-button"
-          onClick={() => deleteClient(client.id)}
+          onClick={(event) => deleteClient(client.id, event)}
         >
-          Turn off
+          Refuse
         </button>
         <button
           className="dropdown-button"
@@ -91,26 +89,16 @@ export default function Clients({ clients, setClients }) {
                 <input type="number" name="interest" />
               </label>
               <label>
-                <span>Period:</span>
-                <input type="number" name="period" />
-              </label>
-              <label>
-                <span>Monthly payment:</span>
-                <input type="number" name="monthly-payment" />
-              </label>
-              <label>
-                <span>Start date:</span>
-                <input type="date" name="start-date" />
-              </label>
-              <label>
-                <span>End date:</span>
-                <input type="date" name="end-date" />
-              </label>
-              <label>
                 <span>Comment:</span>
                 <textarea name="comment" />
               </label>
-              <button type="submit">Approve</button>
+              <button
+                className="aprove-button"
+                type="submit"
+                onClick={(event) => aproveClient(client, event)}
+              >
+                Approve
+              </button>
             </form>
           </div>
         </div>

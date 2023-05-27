@@ -37,8 +37,24 @@ export default function Forms({ clients, setClients }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const { name, employees, email, number, age, segment, ammount, term, CNPJCPF, streetline1, streetline2, district, city, CEP, UF, goal } =
-      formData;
+    const {
+      name,
+      employees,
+      email,
+      number,
+      age,
+      segment,
+      ammount,
+      term,
+      CNPJCPF,
+      streetline1,
+      streetline2,
+      district,
+      city,
+      CEP,
+      UF,
+      goal,
+    } = formData;
 
     const nota =
       (parseFloat(age) +
@@ -95,7 +111,6 @@ export default function Forms({ clients, setClients }) {
       // Handle the error here
       console.error("An error occurred:", error);
     }
-
   };
 
   return (
@@ -173,8 +188,8 @@ export default function Forms({ clients, setClients }) {
               <option value="0.40">Government relations</option>
               <option value="0.68">Corporate social responsibility</option>
             </select>
-            <br /><br />
-
+            <br />
+            <br />
             <label htmlFor="AMMOUNT">Required amount:</label>
             <br />
             <select
@@ -213,8 +228,8 @@ export default function Forms({ clients, setClients }) {
               <option value="0.50">in a semester</option>
               <option value="0.30">in a year</option>
             </select>
-            <br /><br />
-
+            <br />
+            <br />
             <label htmlFor="CNPJCPF">CNPJ/CPF:</label>
             <br />
             <input
@@ -230,7 +245,6 @@ export default function Forms({ clients, setClients }) {
               required
             />
             <br /> <br />
-
             <label htmlFor="streetline1">streetline1:</label>
             <br />
             <input
@@ -243,8 +257,8 @@ export default function Forms({ clients, setClients }) {
               placeholder="-----"
               required
             />
-            <br /><br />
-
+            <br />
+            <br />
             <label htmlFor="streetline2">streetline2:</label>
             <br />
             <input
@@ -257,8 +271,8 @@ export default function Forms({ clients, setClients }) {
               placeholder="-----"
               required
             />
-            <br /><br />
-
+            <br />
+            <br />
             <label htmlFor="district">District:</label>
             <br />
             <input
@@ -271,8 +285,8 @@ export default function Forms({ clients, setClients }) {
               placeholder="-----"
               required
             />
-            <br /><br />
-
+            <br />
+            <br />
             <label htmlFor="city">city:</label>
             <br />
             <input
@@ -285,8 +299,8 @@ export default function Forms({ clients, setClients }) {
               placeholder="-----"
               required
             />
-            <br /><br />
-
+            <br />
+            <br />
             <label htmlFor="CEP">CEP:</label>
             <br />
             <input
@@ -300,8 +314,9 @@ export default function Forms({ clients, setClients }) {
               pattern="^\d+$"
               title="Please enter a valid number."
               required
-            /> <br /><br />
-
+            />{" "}
+            <br />
+            <br />
             <label htmlFor="UF">UF:</label>
             <br />
             <select
@@ -340,10 +355,9 @@ export default function Forms({ clients, setClients }) {
               <option value="SP">São Paulo</option>
               <option value="SE">Sergipe</option>
               <option value="TO">Tocantins</option>
-
             </select>
-            <br /><br />
-
+            <br />
+            <br />
           </div>
 
           <div className="contact">
@@ -395,9 +409,12 @@ export default function Forms({ clients, setClients }) {
               title="Please enter a valid number."
               required
             />
-            <br /><br />
+            <br />
+            <br />
 
-            <label htmlFor="GOAL"><h2>Goals</h2></label>
+            <label htmlFor="GOAL">
+              <h2>Goals</h2>
+            </label>
             <br />
             <textarea
               className="goalBox"
@@ -412,15 +429,10 @@ export default function Forms({ clients, setClients }) {
             ></textarea>
             <br />
             <br />
-
           </div>
-
         </div>
 
-        <div>
-
-
-        </div>
+        <div></div>
 
         <input className="selectBox" type="submit" value="Submit" />
       </form>

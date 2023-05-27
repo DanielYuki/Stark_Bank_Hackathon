@@ -73,6 +73,10 @@ nav .link:hover {
     width: 75vw;
 }
 
+.client-tile:hover{
+    background-color: #f0f0f0;
+}
+
 .client-short-info{
     display: flex;
     flex-direction: row;
@@ -85,9 +89,6 @@ nav .link:hover {
     margin: 0 15px;
 }
 
-.client-short-info:hover{
-    background-color: #f0f0f0;
-}
 
 .client-info{
     display: flex;
