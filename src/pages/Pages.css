@@ -111,11 +111,12 @@ width: 600px;
 }
 
 .sideImage {
-    background-color: rgba(0, 0, 255, 0.299);
+    padding-top: 10vw;
+    background-color: rgba(255, 255, 255, 0);
     border-top: 10vw solid;
     border-left: 10vw;
     border-right: 10vw;
-    border-color: aliceblue;
+    border-color: rgba(255, 255, 255, 0);
     width: 40vw;
     height: 40vh;
 }

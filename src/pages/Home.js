@@ -1,4 +1,8 @@
 import React from "react"
+import forms from "../forms.png"
+import clock from "../clock.png"
+import computer from "../computer.png"
+import { Link, NavLink } from "react-router-dom"
 // import ContactUs from "../components/ContactUs"
 
 export default function Home() {
@@ -23,21 +27,32 @@ export default function Home() {
                             aplique instantaneamente e aproveite o emprestimo
                         </p>
                         <p>
-                            mais ráoido do mercado
+                            mais rápido do mercado
                         </p>
 
                     </div>
                 </div>
+
+
                 <div className="sideImage">
-                    egerwaefda
+
                 </div>
+
 
             </div>
 
             <div className="pagesRight" >
+
+
                 <div className="sideImage">
-                    wetrfgtrg
+
+                    <Link className="forms" to="/">
+                        <img width="200vw" src={forms} alt="forms" />
+                    </Link>
+
                 </div>
+
+
                 <div>
                     <h2 className="subtitleRight">
                         Formulário simples
@@ -65,7 +80,7 @@ export default function Home() {
 
                     <div className="textLeft">
                         <p>
-                            Sistema de validação automatizado que garante
+                            Sistema de validação automatizado que garante:
                         </p>
                         <p>
                             maior agilidade no processo de validação de dados
@@ -75,32 +90,43 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
+
+
                 <div className="sideImage">
-                    rsgfdserfg
+                    <Link className="clock" to="/">
+                        <img width="200px" src={clock} alt="clock" />
+                    </Link>
+
+
                 </div>
 
             </div>
 
             <div className="pagesRight" >
-            <div className="sideImage">
-                awesfdawesdf
-            </div>
-            <div>
-                <h2 className="subtitleRight">
-                    rgerregfswer
-                </h2>
 
-                <div className="textRight">
-                    <p>
-                        tyjh
-                    </p>
-                    <p>
-                        ergserfg
-                    </p>
-                    <p>
-                        wasefwaedfswaedfqwefwefa
-                    </p>
+
+                <div className="sideImage">
+                    <Link className="computer" to="/">
+                        <img width="200px" src={computer} alt="computer" />
+                    </Link>
+
                 </div>
+
+
+                <div>
+                    <h2 className="subtitleRight">
+                        Implementação moderna
+                    </h2>
+
+                    <div className="textRight">
+                        <p>
+                            Trazendo toda a tecnologia que você merece
+                        </p>
+
+                        <p>
+                            Um Banco de verdade para pessoas de verdade
+                        </p>
+                    </div>
                 </div>
             </div>
 
