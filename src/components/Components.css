@@ -1,4 +1,3 @@
-
 main {
     /* width: 100vw; */
     height: 100%;
@@ -28,7 +27,7 @@ nav {
     margin-right: 50px;
 }
 
-nav .link{
+nav .link {
     margin: 0 10px;
     padding: 10px 15px;
     text-decoration: none;
@@ -44,40 +43,40 @@ nav .link:hover {
     background-color: var(--primary-color);
     color: white;
 }
+
 /* HEADER CSS END */
 /* CLIENTS CSS START */
 
-.client-container{
+.client-container {
+    vertical-align: middle;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     height: 90vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
     /* background-color: #f5f5f5; */
 }
 
-.client-tile{
+.client-tile {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 10px;
-    /* color: var(--primary-color); */
-    /* background-color: white; */
-    /* padding: 5px 15px; */
-    /* border: 1px solid gray; */
-    border-radius: 9px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-    width: 75vw;
+    border-bottom: 3px solid #CDCDCD;
+    font-size: 1em;
+    /*color: var(--primary-color);*/
+    /*background-color: white;*/
+    /*padding: 5px 15px; */
+    /*border: 1px solid gray; */
+    /*border-radius: 9px;*/
+    /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);*/
+    /**width: 75vw;*/
 }
 
-.client-tile:hover{
-    background-color: #f0f0f0;
-}
-
-.client-short-info{
+.client-short-info {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -86,20 +85,58 @@ nav .link:hover {
     width: fill-available;
     cursor: pointer;
     position: relative;
-    margin: 0 15px;
+    /*margin: 0 15px;*/
+
+
+    /*width: 951px;*/
+    /*height: 0px;*/
+    /*left: 92.01px;*/
+    /*top: 673.51px;*/
+
 }
 
-
-.client-info{
+.client-short-info .name-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: left;
+    margin: 1em;
+}
+
+.client-short-info .value-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin: 1.5em;
+
+}
+
+.client-short-info .button_type {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin: 1.5em;
+
+}
+
+.client-short-info:hover {
+    background-color: #f0f0f0;
+}
+
+.client-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
     width: 100%;
     border-top: 1px solid gray;
+    /*margin-bottom: 150px;*/
+    overflow-x: hidden;
 }
 
-.client-contact{
+.client-contact {
     /* display: flex; */
     /* flex-direction: column; */
     /* align-items: flex-start; */
@@ -107,7 +144,7 @@ nav .link:hover {
     width: 60%;
 }
 
-button{
+button {
     margin: 0;
     padding: 0;
     border: none;
@@ -119,20 +156,32 @@ button{
     outline: none;
 }
 
-.aprove-button{
-    background-color: rgba(0, 128, 0, 0.665);
-    width: 7em;
-    height: 2em;
-    border-radius: 5px;
-    border: 2px solid;
-
+.aprove-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Align buttons horizontally in the center */
+    justify-content: center;
+    /* Align buttons vertically in the center */
+    /*position: relative;*/
+    width: 70px;
+    height: 25px;
+    background-color: #E49EFD;
+    border-radius: 4.22727px;
+    text-align: center;
 }
 
-.delete-button{
-    background-color: rgba(255, 0, 0, 0.67);
-    width: 7em;
-    height: 2em;
-    border-radius: 5px;
-    border: 2px solid;
+.delete-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Align buttons horizontally in the center */
+    justify-content: center;
+    /*position: relative;*/
+    text-align: center;
+    box-sizing: border-box;
+    width: 70px;
+    height: 25px;
+    border: 1.5px solid #B325F6;
+    border-radius: 4.22727px;
 }
-

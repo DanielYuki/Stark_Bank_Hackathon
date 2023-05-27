@@ -53,16 +53,23 @@ export default function Clients({ clients, setClients }) {
         className="client-short-info"
         onClick={() => toggleDropdown(client.id)}
       >
-        <h3>Name: {client.name}</h3>
-        <p>
-          <span>Wants</span> {calculateAmount(client.ammount)} to {client.goal}
-        </p>
-        <button
-          className="delete-button"
-          onClick={(event) => deleteClient(client.id, event)}
-        >
-          Refuse
-        </button>
+        <div class="name-container">
+          <p>Name: {client.name}</p>
+        </div>
+        <div class="value-container">
+          <p>
+            {/*<span>Wants</span> ${client.ammount} to {client.goal}*/}
+            <span>Wants</span> ${client.ammount}
+          </p>
+        </div>
+        <div className="button_type">
+          <button
+            className="delete-button"
+            onClick={() => deleteClient(client.id)}
+          >
+            Turn off
+          </button>
+        </div>
         <button
           className="dropdown-button"
           onClick={() => toggleDropdown(client.id)}
@@ -79,6 +86,28 @@ export default function Clients({ clients, setClients }) {
             <p>
               <span>Email:</span> {client.email}
             </p>
+            <p>
+              <span>CNPJ/CPF:</span> {client.CNPJCPF}
+            </p>
+            <p>
+              <span>Number of employees:</span> {client.employees}
+            </p>
+            <p>
+              <span>Age of the company:</span> {client.age}
+            </p>
+            <p>
+              <span>The company segment:</span> {client.segment}
+            </p>
+            <p>
+              <span>CEP:</span> {client.CEP}
+            </p>
+            <p>
+              <span>Nota:</span> {client.nota}
+            </p>
+            <p>
+              <span>Goal:</span> {client.goal}
+            </p>
+
           </div>
           <div className="approve-forms">
             <form>
@@ -94,13 +123,15 @@ export default function Clients({ clients, setClients }) {
                 <span>Comment:</span>
                 <textarea name="comment" />
               </label>
-              <button
-                className="aprove-button"
-                type="submit"
-                onClick={(event) => aproveClient(client, event)}
-              >
-                Approve
-              </button>
+              <div className="button_type">
+                <button
+                  className="aprove-button"
+                  onClick={() => aproveClient(client)}
+                  type="submit"
+                >
+                  Approve
+                </button>
+              </div>
             </form>
           </div>
         </div>

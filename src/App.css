@@ -2,7 +2,7 @@
   --primary-color: #B325F6;
   --secondary-color: #E49EFD;
   --font-size: 16px;
-}  
+}
 
 body {
   margin: 0;
@@ -14,7 +14,7 @@ body {
   /* overflow: hidden; */
 }
 
-h1{
+h1 {
   margin: 0;
 }
 
@@ -22,10 +22,10 @@ h1{
   margin: 0;
   text-align: center;
 
-  overflow-x-x: hidden; 
+  overflow-x: hidden;
 }
 
-.site-wrapper::before{
+.site-wrapper::before {
   content: "";
   position: absolute;
   top: 0;
