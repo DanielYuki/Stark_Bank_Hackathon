@@ -1,5 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom"
+import { calculateAmount } from "../functions";
 
 export default function Clients({ clients, setClients }) {
   // const [clients, setClients] = React.useState([]);
@@ -58,7 +59,7 @@ export default function Clients({ clients, setClients }) {
       >
         <h3>Name: {client.name}</h3>
         <p>
-          <span>Wants</span> ${client.ammount} to {client.goal}
+          <span>Wants</span> {calculateAmount(client.ammount)} to {client.goal}
         </p>
         <button
           className="aprove-button"

@@ -119,9 +119,19 @@ button{
 }
 
 .aprove-button{
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.665);
+    width: 7em;
+    height: 2em;
+    border-radius: 5px;
+    border: 2px solid;
+
 }
 
 .delete-button{
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.67);
+    width: 7em;
+    height: 2em;
+    border-radius: 5px;
+    border: 2px solid;
 }
+

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Forms.css";
+import "./Pages.css";
 import { v4 as uuidv4 } from "uuid";
 // import { sendEmail } from "../functions";
 
@@ -179,7 +179,7 @@ export default function Forms({ clients, setClients }) {
               <option value="0.69">Strategic planning</option>
               <option value="0.81">Market analysis</option>
               <option value="0.72">Business consulting</option>
-              <option value="0.90">Risk management</option>
+              <option value="0.92">Risk management</option>
               <option value="0.79">Project management</option>
               <option value="0.40">Government relations</option>
               <option value="0.68">Corporate social responsibility</option>
@@ -414,7 +414,7 @@ export default function Forms({ clients, setClients }) {
               className="goalBox"
               id="GOAL"
               name="goal"
-              rows="29"
+              rows="30"
               cols="27"
               value={formData.goal}
               onChange={handleChange}
@@ -434,7 +434,12 @@ export default function Forms({ clients, setClients }) {
         </div>
 
         <input className="selectBox" type="submit" value="Submit" />
+
+
+        
       </form>
+
+      
     </>
   );
 }
