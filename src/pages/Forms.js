@@ -24,6 +24,7 @@ export default function Forms({ clients, setClients }) {
     goal: "",
     nota: 0,
     id: "",
+    starkId: "",
   });
 
   const handleChange = (event) => {
@@ -54,6 +55,7 @@ export default function Forms({ clients, setClients }) {
       CEP,
       UF,
       goal,
+      starkId,
     } = formData;
 
     const nota =
@@ -61,7 +63,7 @@ export default function Forms({ clients, setClients }) {
         parseFloat(segment) +
         parseFloat(ammount) +
         parseFloat(term)) *
-      1.25 ).toFixed(2);
+        1.25).toFixed(2);
 
     const jsonData = JSON.stringify({
       name,
@@ -82,6 +84,7 @@ export default function Forms({ clients, setClients }) {
       goal,
       nota,
       id: uuidv4(),
+      starkId,
     });
 
     // GENERATE PDF CONTRACT FUNCTION
@@ -358,6 +361,22 @@ export default function Forms({ clients, setClients }) {
             </select>
             <br />
             <br />
+            <label htmlFor="starkId">Stark Id:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="starkId"
+              name="starkId"
+              value={formData.CEP}
+              onChange={handleChange}
+              placeholder="-----"
+              pattern="^\d+$"
+              title="Please enter a valid number."
+              required
+            />{" "}
+            <br />
+            <br />
           </div>
 
           <div className="contact">
@@ -411,6 +430,22 @@ export default function Forms({ clients, setClients }) {
             />
             <br />
             <br />
+            <label htmlFor="starkId">Stark Id:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="starkId"
+              name="starkId"
+              value={formData.CEP}
+              onChange={handleChange}
+              placeholder="-----"
+              pattern="^\d+$"
+              title="Please enter a valid number."
+              required
+            />{" "}
+            <br />
+            <br />
 
             <label htmlFor="GOAL">
               <h2>Goals</h2>
@@ -420,7 +455,7 @@ export default function Forms({ clients, setClients }) {
               className="goalBox"
               id="GOAL"
               name="goal"
-              rows="30"
+              rows="28"
               cols="27"
               value={formData.goal}
               onChange={handleChange}
@@ -432,12 +467,11 @@ export default function Forms({ clients, setClients }) {
           </div>
         </div>
 
-        <div></div>
 
         <button className="submit-forms-button" type="submit" value="Submit" >
           Submit
         </button>
-        
+
       </form>
     </>
   );

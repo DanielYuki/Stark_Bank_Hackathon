@@ -6,16 +6,16 @@ import computer from "../computer.png";
 export default function Home() {
   return (
     <>
-      <h1 className="title">Conheça a StarkLoan</h1>
+      <h1 className="title">About StarkLoan</h1>
 
       <div className="pagesLeft">
         <div>
-          <h2 className="subtitleLeft">O Financiamento inteligente</h2>
+          <h2 className="subtitleLeft">Smart Financing</h2>
 
           <div className="textLeft">
-            <p>O empréstimo do futuro chegou e sem burocracia,</p>
-            <p>aplique instantaneamente e aproveite o emprestimo</p>
-            <p>mais rápido do mercado</p>
+            <p>The loan of the future has arrived and without</p>
+            <p>bureaucracy, apply instantly and enjoy the fastest</p>
+            <p>loan on the market</p>
           </div>
         </div>
 
@@ -28,24 +28,24 @@ export default function Home() {
         </div>
 
         <div>
-          <h2 className="subtitleRight">Formulário simples</h2>
+          <h2 className="subtitleRight">Simple form</h2>
 
           <div className="textRight">
-            <p>Solicitamos apenas as informações essenciais</p>
-            <p>dispensando pilhas de papel e economizando seu</p>
-            <p>tempo</p>
+            <p>We only ask for essential information</p>
+            <p>dispensing with piles of paper and saving your</p>
+            <p>time</p>
           </div>
         </div>
       </div>
 
       <div className="pagesLeft">
         <div>
-          <h2 className="subtitleLeft">Aprovação rápida</h2>
+          <h2 className="subtitleLeft">Fast Approval</h2>
 
           <div className="textLeft">
-            <p>Sistema de validação automatizado que garante</p>
-            <p>maior agilidade no processo de validação de dados</p>
-            <p>e fluxo de aprovações</p>
+            <p>Automated validation system that guarantees</p>
+            <p>greater agility in the data validation process</p>
+            <p>and approval flow</p>
           </div>
         </div>
         <div className="sideImage">
@@ -59,12 +59,12 @@ export default function Home() {
         </div>
 
         <div>
-          <h2 className="subtitleRight">Implementação moderna</h2>
+          <h2 className="subtitleRight">modern implementation</h2>
 
           <div className="textRight">
-            <p>Trazendo toda a tecnologia que você merece</p>
+            <p>Bringing you all the technology you deserve</p>
 
-            <p>Um Banco de verdade para pessoas de verdade</p>
+            <p>A real bank for real people</p>
           </div>
         </div>
       </div>
