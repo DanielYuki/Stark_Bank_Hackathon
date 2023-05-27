@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-let privateKey, publicKey;
+// let privateKey, publicKey;
 
 // [privateKey, publicKey] = starkbank.key.create("./startkbankKey.pem");
 
@@ -25,8 +25,6 @@ let privateKey, publicKey;
 
 let privateKeyContent = `
 -----BEGIN EC PRIVATE KEY-----
-
-TO RUN THIS CODE, PLEASE PUT YOUR PRIVATE KEY
 
 -----END EC PRIVATE KEY-----
 
@@ -53,47 +51,48 @@ app.get("/starkUser", (req, res) => {
 });
 
 app.post("/v2/transaction", async (req, res) => {
-  starkbank.user = project
-  const client = req.body
+  starkbank.user = project;
+  const client = req.body;
   try {
     let transactions = await starkbank.transaction.create([
       {
         amount: Number(client.amount),
-        receiverId: '4849799949975552',
+        receiverId: "4849799949975552",
         description: client.comment,
         externalId: String(client.externalId),
-        tags: ['sugou', 'insano']
-      }
+        tags: ["sugou", "insano"],
+      },
     ]);
 
     res.status(200).json(transactions); // Send the transactions as JSON response
   } catch (error) {
     console.error(error);
-    res.status(500).send('Internal Server Error');
+    res.status(500).send("Internal Server Error");
   }
 });
 
 // dummy data
 const clients = [
   {
-    name: "Unblivion",
-    employees: "27",
+    name: "Hackathon",
+    employees: "3",
     email: "unblivion@gmail.com",
-    number: "40028922",
-    age: "0.25",
-    segment: "0.72",
-    ammount: "0.25",
-    term: "1.00",
-    CNPJCPF: "40028922",
-    streetline1: "",
+    number: "2740028922",
+    age: "0.15",
+    segment: "0.90",
+    ammount: "0.10",
+    term: "0.30",
+    CNPJCPF: "12345432",
+    streetline1: "Rua H8C",
     streetline2: "",
-    district: "",
-    city: "",
-    CEP: "",
-    UF: "",
-    goal: "Do something",
-    nota: 4.54,
-    id: "1f0a70b7-d319-481e-ba4e-114035d08bc1",
+    district: "A",
+    city: "B",
+    CEP: "12345678",
+    UF: "SP",
+    goal: "Só quero torar insano",
+    nota: "1.81",
+    id: "4a8df5c6-b76d-45f1-ac45-af16431a815e",
+    starkId: "4849799949975552",
   },
   {
     name: "linguica",
