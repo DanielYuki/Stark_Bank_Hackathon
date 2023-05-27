@@ -1,113 +1,110 @@
 /* VALIDATION PAGE CSS START */
-.validation-page{
-    height: 100%;
+.validation-page {
+  height: 100%;
 }
 
 body {
-    font-weight: 700;
-    
+  font-weight: 700;
 }
 
 .box {
-    /* background-color: rgb(255, 255, 255); */
-    padding-top: 20px;
-    overflow:hidden;
-    
-
+  /* background-color: rgb(255, 255, 255); */
+  padding: 20px;
+  overflow: hidden;
 }
 
 .boxTechnicalAndContact {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .technical {
-    /* background-color: rgb(255, 255, 255); */
-    width: 600px;
-    height: 500px;
+  /* background-color: rgb(255, 255, 255); */
+  width: 600px;
+  height: 500px;
 }
 
 .contact {
-/* background-color: rgb(255, 255, 255); */
-width: 600px;
-
+  /* background-color: rgb(255, 255, 255); */
+  width: 600px;
 }
 
 .selectBox {
-    width: 300px;
-    margin: 0 10px;
-    padding: 10px 15px;
-    text-decoration: none;
-    font-weight: 100;
-    font-size: 1.25rem;
-    color: #B325F6;
-    background-color: white;
-    border: 1px solid #B325F6;
-    border-radius: 9px;
+  width: 300px;
+  margin: 0 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1.25rem;
+  color: #b325f6;
+  background-color: white;
+  border: 1px solid #b325f6;
+  border-radius: 9px;
+}
+
+.selectBox:hover {
+  background-color: #b325f6;
+  color: white;
+  cursor: pointer;
 }
 
 .goalBox {
-    margin: 0 10px;
-    padding: 10px 15px;
-    text-decoration: none;
-    font-weight: 100;
-    font-size: 1.25rem;
-    color: #B325F6;
-    background-color: white;
-    border: 1px solid #B325F6;
-    border-radius: 9px;
+  margin: 0 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1.25rem;
+  color: #b325f6;
+  background-color: white;
+  border: 1px solid #b325f6;
+  border-radius: 9px;
 }
 
 .title {
-    font-size: 7em;
+  font-size: 7em;
 }
 
 .pagesLeft {
-    justify-content: left;
-    display: flex;
-    width: 98vw;
-    height: 60vh;
+  justify-content: left;
+  display: flex;
+  width: 98vw;
+  height: 60vh;
 }
 
 .pagesRight {
-    justify-content: right;
-    display: flex;
-    width: 98vw;
-    height: 60vh;
+  justify-content: right;
+  display: flex;
+  width: 98vw;
+  height: 60vh;
 }
 
 .subtitleRight {
-    font-size: 3em;
-    text-align: right;
-    padding-right: 10vw;
-    padding-top: 10vw;
-    padding-bottom: 5vw;
-
+  font-size: 3em;
+  text-align: right;
+  padding-right: 10vw;
+  padding-top: 10vw;
+  padding-bottom: 5vw;
 }
 
 .textRight {
-    font-size: 1.5em;
-    text-align: right;
-    padding-right: 10vw;
-
-
+  font-size: 1.5em;
+  text-align: right;
+  padding-right: 10vw;
 }
 
 .subtitleLeft {
-    font-size: 3em;
-    text-align: left;
-    padding-left: 10vw;
-    padding-top: 10vw;
-    padding-bottom: 5vw;
-
+  font-size: 3em;
+  text-align: left;
+  padding-left: 10vw;
+  padding-top: 10vw;
+  padding-bottom: 5vw;
 }
 
 .textLeft {
-    font-size: 1.5em;
-    text-align: left;
-    padding-left: 10vw;
-    max-width: 45vw;
-
+  font-size: 1.5em;
+  text-align: left;
+  padding-left: 10vw;
+  max-width: 45vw;
 }
 
 .sideImage {

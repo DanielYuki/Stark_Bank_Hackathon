@@ -57,11 +57,11 @@ export default function Forms({ clients, setClients }) {
     } = formData;
 
     const nota =
-      (parseFloat(age) +
+      ((parseFloat(age) +
         parseFloat(segment) +
         parseFloat(ammount) +
         parseFloat(term)) *
-      1.25;
+      1.25 ).toFixed(2);
 
     const jsonData = JSON.stringify({
       name,
@@ -424,7 +424,7 @@ export default function Forms({ clients, setClients }) {
               cols="27"
               value={formData.goal}
               onChange={handleChange}
-              placeholder="Make a discription of yours goals and methods"
+              placeholder="Write a brief description of your goals and methods"
               required
             ></textarea>
             <br />
@@ -435,12 +435,7 @@ export default function Forms({ clients, setClients }) {
         <div></div>
 
         <input className="selectBox" type="submit" value="Submit" />
-
-
-        
       </form>
-
-      
     </>
   );
 }
