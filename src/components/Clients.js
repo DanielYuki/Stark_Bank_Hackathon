@@ -8,6 +8,7 @@ export default function Clients({ clients, setClients }) {
   const [emailData, setEmailData] = React.useState({
     amount: "",
     comment: "",
+    externalId: "",
   });
 
   const handleChange = (event) => {
@@ -15,6 +16,7 @@ export default function Clients({ clients, setClients }) {
     setEmailData((prevData) => ({
       ...prevData,
       [name]: value,
+      externalId: Math.floor(Math.random() * (9999999999999999 - 1000000000000000 + 1)) + 1000000000000000,
     }));
   };
 
@@ -36,8 +38,37 @@ export default function Clients({ clients, setClients }) {
   function aproveClient(client, emailData, event) {
     event.preventDefault();
     // event.stopPropagation();
-    sendEmail(client.email, client.name, emailData.comment, emailData.amount);
+
+    const fullClient = { ...client, ...emailData }; //gambiarra infinita
+    JSON.stringify(fullClient);
+    // console.log(fullClient);
+
+    // sendEmail(fullClient.email, fullClient.name, fullClient.comment, fullClient.amount);
+
     // sandbox starkbank
+
+    try {
+      fetch("http://localhost:8000/v2/transaction", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(fullClient),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            console.error("Network response was not ok");
+          }
+          return response.text();
+        })
+        .then((data) => {
+
+          console.log(data);
+        });
+    } catch (error) {
+      // Handle the error here
+      console.error("An error occurred:", error);
+    }
 
     generateContract(client);
     console.log("aproveClient");
