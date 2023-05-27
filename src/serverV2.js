@@ -32,7 +32,7 @@ const clients = [
     CEP: "",
     UF: "",
     goal: "Do something",
-    nota: 2.7749999999999995,
+    nota: 4.54,
     id: "1f0a70b7-d319-481e-ba4e-114035d08bc1",
   },
   {
@@ -52,7 +52,7 @@ const clients = [
     CEP: "",
     UF: "",
     goal: "liguicao",
-    nota: 2.7,
+    nota: 2.70,
     id: "072bae9f-ac13-4640-bf3d-2afa2e4a81c4",
   },
 ];
@@ -75,10 +75,7 @@ app.get("/clients/:id", (req, res) => {
 app.post("/addClients", (req, res) => {
   const newItem = req.body; // The new item sent from the client
 
-  // Process the new item and add it to your list
-  // Here, you can store it in a database, an in-memory array, or any other data storage mechanism
   clients.push(newItem);
-  // Send a response back to the client
   res.status(201).json(newItem);
 });
 

@@ -434,7 +434,10 @@ export default function Forms({ clients, setClients }) {
 
         <div></div>
 
-        <input className="selectBox" type="submit" value="Submit" />
+        <button className="submit-forms-button" type="submit" value="Submit" >
+          Submit
+        </button>
+        
       </form>
     </>
   );

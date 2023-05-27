@@ -42,7 +42,20 @@ body {
   border-radius: 9px;
 }
 
-.selectBox:hover {
+.submit-forms-button {
+  width: 300px;
+  margin: 0 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #b325f6;
+  background-color: white;
+  border: 1px solid #b325f6;
+  border-radius: 9px;
+}
+
+.submit-forms-button:hover {
   background-color: #b325f6;
   color: white;
   cursor: pointer;

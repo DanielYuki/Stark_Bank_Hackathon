@@ -68,7 +68,7 @@ export default function Clients({ clients, setClients }) {
         onClick={() => toggleDropdown(client.id)}
       >
         <div className="name-container">
-          <p>Name: {client.name}</p>
+          <h2>{client.name}</h2>
         </div>
         <div className="value-container">
           <p>
@@ -92,7 +92,7 @@ export default function Clients({ clients, setClients }) {
           className="dropdown-button"
           onClick={() => toggleDropdown(client.id)}
         >
-          {isDropdownOpen(client.id) ? "^" : "V"}
+          {/* {isDropdownOpen(client.id) ? "^" : "V"} */}
         </button>
       </div>
       {isDropdownOpen(client.id) && (

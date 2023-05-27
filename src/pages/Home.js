@@ -1,9 +1,7 @@
-import React from "react"
-import forms from "../forms.png"
-import clock from "../clock.png"
-import computer from "../computer.png"
-import { Link, NavLink } from "react-router-dom"
-// import ContactUs from "../components/ContactUs"
+import React from "react";
+import forms from "../forms.png";
+import clock from "../clock.png";
+import computer from "../computer.png";
 
 export default function Home() {
   return (
@@ -14,45 +12,23 @@ export default function Home() {
         <div>
           <h2 className="subtitleLeft">O Financiamento inteligente</h2>
 
-                    <div className="textLeft">
+          <div className="textLeft">
+            <p>O empréstimo do futuro chegou e sem burocracia,</p>
+            <p>aplique instantaneamente e aproveite o emprestimo</p>
+            <p>mais rápido do mercado</p>
+          </div>
+        </div>
 
-                        <p>
-                            O empréstimo do futuro chegou e sem burocracia,
-                        </p>
-                        <p>
-                            aplique instantaneamente e aproveite o emprestimo
-                        </p>
-                        <p>
-                            mais rápido do mercado
-                        </p>
+        <div className="sideImage"></div>
+      </div>
 
-                    </div>
-                </div>
+      <div className="pagesRight">
+        <div className="sideImage">
+          <img width="200vw" src={forms} alt="forms" />
+        </div>
 
-
-                <div className="sideImage">
-
-                </div>
-
-
-            </div>
-
-            <div className="pagesRight" >
-
-
-                <div className="sideImage">
-
-                    <Link className="forms" to="/">
-                        <img width="200vw" src={forms} alt="forms" />
-                    </Link>
-
-                </div>
-
-
-                <div>
-                    <h2 className="subtitleRight">
-                        Formulário simples
-                    </h2>
+        <div>
+          <h2 className="subtitleRight">Formulário simples</h2>
 
           <div className="textRight">
             <p>Solicitamos apenas as informações essenciais</p>
@@ -66,56 +42,32 @@ export default function Home() {
         <div>
           <h2 className="subtitleLeft">Aprovação rápida</h2>
 
-                    <div className="textLeft">
-                        <p>
-                            Sistema de validação automatizado que garante
-                        </p>
-                        <p>
-                            maior agilidade no processo de validação de dados
-                        </p>
-                        <p>
-                            e fluxo de aprovações
-                        </p>
-                    </div>
-                </div>
-                <div className="sideImage">
-                    rsgfdserfg
-                </div>
+          <div className="textLeft">
+            <p>Sistema de validação automatizado que garante</p>
+            <p>maior agilidade no processo de validação de dados</p>
+            <p>e fluxo de aprovações</p>
+          </div>
+        </div>
+        <div className="sideImage">
+          <img width="200vw" src={clock} alt="clock" />
+        </div>
+      </div>
 
-            </div>
+      <div className="pagesRight">
+        <div className="sideImage">
+          <img width="200px" src={computer} alt="computer" />
+        </div>
 
-            <div className="pagesRight" >
+        <div>
+          <h2 className="subtitleRight">Implementação moderna</h2>
 
+          <div className="textRight">
+            <p>Trazendo toda a tecnologia que você merece</p>
 
-                <div className="sideImage">
-                    <Link className="computer" to="/">
-                        <img width="200px" src={computer} alt="computer" />
-                    </Link>
-
-                </div>
-
-
-                <div>
-                    <h2 className="subtitleRight">
-                        Implementação moderna
-                    </h2>
-
-                    <div className="textRight">
-                        <p>
-                            Trazendo toda a tecnologia que você merece
-                        </p>
-
-                        <p>
-                            Um Banco de verdade para pessoas de verdade
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-        </>
-    )
+            <p>Um Banco de verdade para pessoas de verdade</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

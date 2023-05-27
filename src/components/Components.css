@@ -64,7 +64,7 @@ nav .link:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    margin: 30px;
     border-bottom: 3px solid #CDCDCD;
     font-size: 1em;
     /*color: var(--primary-color);*/
@@ -72,7 +72,7 @@ nav .link:hover {
     /*padding: 5px 15px; */
     /*border: 1px solid gray; */
     /*border-radius: 9px;*/
-    /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);*/
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
     /**width: 75vw;*/
 }
 
@@ -100,7 +100,7 @@ nav .link:hover {
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    margin: 1em;
+    margin-left: 1em;
 }
 
 .client-short-info .value-container {
@@ -137,11 +137,21 @@ nav .link:hover {
 }
 
 .client-contact {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: flex-start; */
-    /* justify-content: center; */
-    width: 60%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40%;
+}
+
+.client-contact p{
+    font-weight: 450;
+    margin: 7.5px;
+}
+
+.client-contact span{
+    font-weight: 700;
 }
 
 button {
