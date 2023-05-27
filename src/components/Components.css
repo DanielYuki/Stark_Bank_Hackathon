@@ -166,9 +166,22 @@ button {
     /*position: relative;*/
     width: 70px;
     height: 25px;
-    background-color: #E49EFD;
+    background-color: #5DA21A;
+    color: white;
     border-radius: 4.22727px;
     text-align: center;
+}
+
+.aprove-button:hover {
+    background-color: #4B7E14;
+}
+
+.approve-forms form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
 }
 
 .delete-button {
@@ -182,6 +195,12 @@ button {
     box-sizing: border-box;
     width: 70px;
     height: 25px;
-    border: 1.5px solid #B325F6;
+    /* border: 1.5px solid #C30018; */
+    background-color: #C30018;
+    color: white;
     border-radius: 4.22727px;
+}
+
+.delete-button:hover {
+    background-color: #A30014;
 }

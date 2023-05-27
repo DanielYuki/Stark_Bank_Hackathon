@@ -2,8 +2,21 @@ import React from "react";
 // import { Link } from "react-router-dom"
 import { calculateAmount } from "../functions";
 import { generateContract } from "../functions";
+import { sendEmail } from "../functions";
 
 export default function Clients({ clients, setClients }) {
+  const [emailData, setEmailData] = React.useState({
+    amount: "",
+    comment: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setEmailData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   function deleteClient(id, event) {
     event.stopPropagation();
@@ -20,12 +33,13 @@ export default function Clients({ clients, setClients }) {
       });
   }
 
-  function aproveClient(client, event) {
+  function aproveClient(client, emailData, event) {
     event.preventDefault();
-    event.stopPropagation();
-
+    // event.stopPropagation();
+    sendEmail(client.email, client.name, emailData.comment, emailData.amount);
     // sandbox starkbank
-    // generateContract(client);
+
+    generateContract(client);
     console.log("aproveClient");
   }
 
@@ -53,21 +67,25 @@ export default function Clients({ clients, setClients }) {
         className="client-short-info"
         onClick={() => toggleDropdown(client.id)}
       >
-        <div class="name-container">
+        <div className="name-container">
           <p>Name: {client.name}</p>
         </div>
-        <div class="value-container">
+        <div className="value-container">
           <p>
-            {/*<span>Wants</span> ${client.ammount} to {client.goal}*/}
-            <span>Wants</span> ${client.ammount}
+            <span>Wants</span> {calculateAmount(client.ammount)}
+          </p>
+        </div>
+        <div className="value-container">
+          <p>
+            <span>Nota:</span> {client.nota}
           </p>
         </div>
         <div className="button_type">
           <button
             className="delete-button"
-            onClick={() => deleteClient(client.id)}
+            onClick={(event) => deleteClient(client.id, event)}
           >
-            Turn off
+            Negate
           </button>
         </div>
         <button
@@ -81,7 +99,7 @@ export default function Clients({ clients, setClients }) {
         <div className="client-info">
           <div className="client-contact">
             <p>
-              <span>Phone:</span> {client.phone}
+              <span>Phone:</span> {client.number}
             </p>
             <p>
               <span>Email:</span> {client.email}
@@ -107,26 +125,30 @@ export default function Clients({ clients, setClients }) {
             <p>
               <span>Goal:</span> {client.goal}
             </p>
-
           </div>
           <div className="approve-forms">
             <form>
               <label>
                 <span>Amount:</span>
-                <input type="number" name="amount" />
-              </label>
-              <label>
-                <span>Interest:</span>
-                <input type="number" name="interest" />
+                <input
+                  onChange={handleChange}
+                  placeholder="XXXX $"
+                  type="number"
+                  name="amount"
+                />
               </label>
               <label>
                 <span>Comment:</span>
-                <textarea name="comment" />
+                <textarea
+                  placeholder="Send a message to client"
+                  onChange={handleChange}
+                  name="comment"
+                />
               </label>
               <div className="button_type">
                 <button
                   className="aprove-button"
-                  onClick={() => aproveClient(client)}
+                  onClick={(event) => aproveClient(client, emailData, event)}
                   type="submit"
                 >
                   Approve
