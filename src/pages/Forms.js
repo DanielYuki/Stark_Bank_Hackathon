@@ -361,6 +361,9 @@ export default function Forms({ clients, setClients }) {
             </select>
             <br />
             <br />
+<<<<<<< HEAD
+            
+=======
             {/* <label htmlFor="starkId">Stark Id:</label>
             <br />
             <input
@@ -377,6 +380,7 @@ export default function Forms({ clients, setClients }) {
             />{" "}
             <br /> */}
             <br />
+>>>>>>> 8188f5b8a486df12021aa6427bcb300ac26169c2
           </div>
 
           <div className="contact">
