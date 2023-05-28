@@ -347,12 +347,6 @@ export default function Forms({ clients, setClients }) {
             </select>
             <br />
             <br />
-<<<<<<< HEAD
-=======
-
-            
-
->>>>>>> bc856b4eea52cfc73c36f3a80e06bfe3470e982a
           </div>
 
           <div className="contact">

@@ -26,6 +26,8 @@ app.use(function (req, res, next) {
 let privateKeyContent = `
 -----BEGIN EC PRIVATE KEY-----
 
+TO USE, PLEASE PUT YOUR PRIVATE KEY HERE
+
 -----END EC PRIVATE KEY-----
 
 -----BEGIN PUBLIC KEY-----

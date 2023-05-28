@@ -214,3 +214,77 @@ button {
 .delete-button:hover {
     background-color: #A30014;
 }
+
+.text-box{
+    display: grid;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.text-box:focus-visible{
+    display: grid;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+}
+
+.text-box:hover{
+    display: grid;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    border: 2px solid gray;
+}
+.text-box-var{
+    display: grid;
+    gap: 0.5rem;
+    width: 400px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+.text-box-var:focus-visible{
+    display: grid;
+    gap: 0.5rem;
+    width: 400px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+}
+
+.text-box-var:hover{
+    display: grid;
+    gap: 0.5rem;
+    width: 400px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    border: 2px solid gray;
+}
+
+.analize-box{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid gray;
+
+}

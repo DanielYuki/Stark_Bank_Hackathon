@@ -16,7 +16,9 @@ export default function Clients({ clients, setClients }) {
     setEmailData((prevData) => ({
       ...prevData,
       [name]: value,
-      externalId: Math.floor(Math.random() * (9999999999999999 - 1000000000000000 + 1)) + 1000000000000000,
+      externalId:
+        Math.floor(Math.random() * (9999999999999999 - 1000000000000000 + 1)) +
+        1000000000000000,
     }));
   };
 
@@ -43,7 +45,12 @@ export default function Clients({ clients, setClients }) {
     JSON.stringify(fullClient);
     // console.log(fullClient);
 
-    // sendEmail(fullClient.email, fullClient.name, fullClient.comment, fullClient.amount);
+    sendEmail(
+      fullClient.email,
+      fullClient.name,
+      fullClient.comment,
+      fullClient.amount
+    );
 
     // sandbox starkbank
 
@@ -62,7 +69,6 @@ export default function Clients({ clients, setClients }) {
           return response.text();
         })
         .then((data) => {
-
           console.log(data);
         });
     } catch (error) {
@@ -162,6 +168,7 @@ export default function Clients({ clients, setClients }) {
               <label>
                 <span>Amount:</span>
                 <input
+                  className="text-box"
                   onChange={handleChange}
                   placeholder="XXXX $"
                   type="number"
@@ -170,7 +177,8 @@ export default function Clients({ clients, setClients }) {
               </label>
               <label>
                 <span>Comment:</span>
-                <textarea
+                <input
+                  className="text-box-var"
                   placeholder="Send a message to client"
                   onChange={handleChange}
                   name="comment"
@@ -194,7 +202,9 @@ export default function Clients({ clients, setClients }) {
 
   return (
     <div className="client-container">
-      <h1>Analize our clients</h1>
+      <div className="analize-box">
+        <h1> Analize our clients</h1>
+      </div>
       <div className="clients">{clientElements}</div>
     </div>
   );
