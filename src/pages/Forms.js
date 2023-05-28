@@ -248,7 +248,7 @@ export default function Forms({ clients, setClients }) {
               required
             />
             <br /> <br />
-            <label htmlFor="streetline1">streetline1:</label>
+            <label htmlFor="streetline1">streetline:</label>
             <br />
             <input
               className="selectBox"
@@ -262,7 +262,7 @@ export default function Forms({ clients, setClients }) {
             />
             <br />
             <br />
-            <label htmlFor="streetline2">streetline2:</label>
+            {/* <label htmlFor="streetline2">streetline2:</label>
             <br />
             <input
               className="selectBox"
@@ -275,7 +275,7 @@ export default function Forms({ clients, setClients }) {
               required
             />
             <br />
-            <br />
+            <br /> */}
             <label htmlFor="district">District:</label>
             <br />
             <input
@@ -361,7 +361,26 @@ export default function Forms({ clients, setClients }) {
             </select>
             <br />
             <br />
+<<<<<<< HEAD
             
+=======
+            {/* <label htmlFor="starkId">Stark Id:</label>
+            <br />
+            <input
+              className="selectBox"
+              type="text"
+              id="starkId"
+              name="starkId"
+              value={formData.CEP}
+              onChange={handleChange}
+              placeholder="-----"
+              pattern="^\d+$"
+              title="Please enter a valid number."
+              required
+            />{" "}
+            <br /> */}
+            <br />
+>>>>>>> 8188f5b8a486df12021aa6427bcb300ac26169c2
           </div>
 
           <div className="contact">
@@ -440,7 +459,7 @@ export default function Forms({ clients, setClients }) {
               className="goalBox"
               id="GOAL"
               name="goal"
-              rows="28"
+              rows="22"
               cols="27"
               value={formData.goal}
               onChange={handleChange}
