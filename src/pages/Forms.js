@@ -193,7 +193,7 @@ export default function Forms({ clients, setClients }) {
             </select>
             <br />
             <br />
-            <label htmlFor="AMMOUNT">Required amount:</label>
+            <label htmlFor="AMMOUNT">Required ammount:</label>
             <br />
             <select
               className="selectBox"
@@ -262,20 +262,6 @@ export default function Forms({ clients, setClients }) {
             />
             <br />
             <br />
-            {/* <label htmlFor="streetline2">streetline2:</label>
-            <br />
-            <input
-              className="selectBox"
-              type="text"
-              id="streetline2"
-              name="streetline2"
-              value={formData.streetline2}
-              onChange={handleChange}
-              placeholder="-----"
-              required
-            />
-            <br />
-            <br /> */}
             <label htmlFor="district">District:</label>
             <br />
             <input
@@ -361,26 +347,9 @@ export default function Forms({ clients, setClients }) {
             </select>
             <br />
             <br />
-<<<<<<< HEAD
+
             
-=======
-            {/* <label htmlFor="starkId">Stark Id:</label>
-            <br />
-            <input
-              className="selectBox"
-              type="text"
-              id="starkId"
-              name="starkId"
-              value={formData.CEP}
-              onChange={handleChange}
-              placeholder="-----"
-              pattern="^\d+$"
-              title="Please enter a valid number."
-              required
-            />{" "}
-            <br /> */}
-            <br />
->>>>>>> 8188f5b8a486df12021aa6427bcb300ac26169c2
+
           </div>
 
           <div className="contact">

@@ -94,3 +94,102 @@ export function calculateAmount(num) {
   }
   return value;
 }
+
+export function ageOfCompany(num) {
+  let value;
+  switch (num) {
+    case "0.15":
+      value = "less than a year";
+      break;
+    case "0.25":
+      value = "Between 1 and 2 years";
+      break;
+    case "0.40":
+      value = "Between 2 and 4 years";
+      break;
+    case "0.50":
+      value = "Between 4 and 8 years";
+      break;
+    case "0.75":
+      value = "Between 8 and 16 years";
+      break;
+    case "1.00":
+      value = "Over 16 years old";
+      break;
+    default:
+      value = "Invalid value";
+      break;
+  }
+  return value;
+}
+
+export function companySegment(num) {
+  let value;
+  switch (num) {
+    case "0.90":
+      value = "Strategic management";
+      break;
+    case "0.91":
+      value = "Operational management";
+      break;
+    case "1.00":
+      value = "Financial management";
+      break;
+    case "0.51":
+      value = "Human resource management";
+      break;
+    case "0.30":
+      value = "Marketing and sales";
+      break;
+    case "0.80":
+      value = "Information technology management";
+      break;
+    case "0.70":
+      value = "Retail";
+      break;
+    case "0.49":
+      value = "Supply chain management";
+      break;
+    case "0.52":
+      value = "Quality management";
+      break;
+    case "0.60":
+      value = "Research and development";
+      break;
+    case "0.71":
+      value = "Innovation management";
+      break;
+    case "0.31":
+      value = "Public relations and communication";
+      break;
+    case "0.48":
+      value = "Sustainability management";
+      break;
+    case "0.69":
+      value = "Strategic planning";
+      break;
+    case "0.81":
+      value = "Market analysis";
+      break;
+    case "0.72":
+      value = "Business consulting";
+      break;
+    case "0.92":
+      value = "Risk management";
+      break;
+    case "0.79":
+      value = "Project management";
+      break;
+    case "0.40":
+      value = "Government relations";
+      break;
+    case "0.68":
+      value = "Corporate social responsibility";
+      break;
+    default:
+      value = "Invalid value";
+      break;
+  }
+  return value;
+}
+
