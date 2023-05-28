@@ -73,7 +73,91 @@ body {
   border-radius: 9px;
 }
 
-.title {
+
+/* HOME PAGE CSS START */
+
+.home-container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.bg-img{
+  background-image: url(../../public/logo512.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+  position: fixed;
+  opacity: 0.1;
+  width: 100vw;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  /* place-items: center; */
+  align-content: center;
+  justify-content: center;
+  /* flex-direction: column; */
+  height: 95vh;
+  width: 100vw;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(3px);
+  transform: translateX(-100vw);
+}
+
+.visible {
+  opacity: 1;
+  transition: all 1s;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.txt-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 50vw;
+}
+
+.sideImage{
+  margin: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitle{
+  font-size: 3em;
+  text-align: center;
+  font-weight: 700;
+}
+
+.description-box{
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* @media(prefers-reduced-motion: reduce) {
+  .hidden,
+  .visible {
+    transition: none;
+  }
+} */
+
+
+
+
+
+
+
+/* .title {
   font-size: 5em;
 }
 
@@ -129,4 +213,4 @@ body {
     border-color: rgba(255, 255, 255, 0);
     width: 40vw;
     height: 40vh;
-}
+} */

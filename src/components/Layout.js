@@ -8,6 +8,7 @@ export default function Layout(){
         <div className="site-wrapper">
             <Header />
             <main>
+                <div className="bg-img"></div>
                 <Outlet/>
             </main>
         </div>
