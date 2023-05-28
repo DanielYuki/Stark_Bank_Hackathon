@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# Stark Loan App Info:
+The Stark Loan App was developed as part of a hackathon organized by Stark Bank specifically for ITA students.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objectives:
+Our primary objective was to implement an intelligent loan system that rates the loan proposals based on multiple data and by an AI market tendency evaluation.
 
-## Available Scripts
+## Useful Information:
+### Quick and easy:
+We just need to collected essential information, like: company name, CNPJ/CPF (tax identification number), email, address, number of employees, age of the company, company segment and required loan amount, for instance.
 
-In the project directory, you can run:
+### Information Treatment:
+The data provided by clients served multiple purposes, including contact purposes, generating future payment slips (boletos), preparing future contracts, and conducting a pre-analysis evaluation.
 
-### `npm start`
+### AI Judgment:
+For the initial evaluation, we leveraged an AI feature that analyze the client's goals. This facilitated a better understanding of whether their project is feasible or not, streamlining the decision-making process.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Neural Network:
+In addition, we found great value in implementing a neural network-based points criteria. This allowed us to establish a systematic evaluation process, considering various factors and enabling more accurate and efficient loan assessments.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+By incorporating AI judgment and a neural network-based evaluation system, our Stark Loan App became a powerful tool, providing intelligent and data-driven loan decisions for our clients.
