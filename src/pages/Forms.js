@@ -361,22 +361,7 @@ export default function Forms({ clients, setClients }) {
             </select>
             <br />
             <br />
-            <label htmlFor="starkId">Stark Id:</label>
-            <br />
-            <input
-              className="selectBox"
-              type="text"
-              id="starkId"
-              name="starkId"
-              value={formData.CEP}
-              onChange={handleChange}
-              placeholder="-----"
-              pattern="^\d+$"
-              title="Please enter a valid number."
-              required
-            />{" "}
-            <br />
-            <br />
+            
           </div>
 
           <div className="contact">
@@ -437,7 +422,7 @@ export default function Forms({ clients, setClients }) {
               type="text"
               id="starkId"
               name="starkId"
-              value={formData.CEP}
+              value={formData.starkId}
               onChange={handleChange}
               placeholder="-----"
               pattern="^\d+$"
